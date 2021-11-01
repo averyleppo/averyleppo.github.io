@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+
+	#backgroundimage {
+			width:100%;
+			background-image: url(field.png);
+			background-size: contain;
+			position: fixed;
+			height: 800px;
+			margin:0px;
+			top:0px;
+			left:0px;
+
+	}
+
+	#soccerball {
+			background-image: url(soccerball.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			top: 650px;
+			left: 1070px;
+			animation-duration: 1.7s;
+			transition:1.7s;
+			transition-timing-function:ease-in-out; 
+			animation-iteration-count: 1;
+			z-index: 10;
+
+	}
+
+	#kiera {
+			background-image: url(kiera.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			width: 400px;
+			height: 400px;
+			top: 350px;
+			left: 1000px;
+			z-index: 0;
+	}
+
+@keyframes spin{
+
+	0% {
+		top: 650;
+		left: 1070px;
+		}
+	100% {
+		top: 330px;
+		left: 300px;
+	}
+
+
+body {
+	margin:0px;
+}
+
+</style>
+
+</head>
+<body>
+	<div id="backgroundimage">
+		<div id="soccerball"></div>
+		<div id="kiera"></div>
+	</div>
+
+
+<script type="text/javascript">
+	var ball = document.getElementById("soccerball");
+
+	
+
+	ball.addEventListener("click", function(){
+			console.log('HELLO?');
+			console.log("ahhhh1");
+			ball.style.animationName = "spin";
+			setTimeout(removeAnimationName, 2000);
+		})
+
+
+	function removeAnimationName () {
+			ball.style.animationName = "";
+			console.log("animation name removed")
+			}
+
+
+</script>
+
+</body>
+</html>

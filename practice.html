@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+#softball {
+	background-image: url(softball.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 500px;
+	position: relative;
+	top: -40px;
+	left: 300px;
+	animation-duration: 1.7s;
+	animation-iteration-count: 3;
+
+}
+
+@keyframes spin{
+	0% {
+		top: -40;
+		left: 300;
+	}
+	100% {
+		top: 500;
+		left: 300;
+	}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+<div id="softball"></div>
+
+<script type="text/javascript">
+var ball = document.getElementById("softball");
+
+function removeAnimationName () {
+	ball.style.animationName = "";
+	console.log ("animation name removed")
+}
+
+	document.addEventListener(
+		"click", function(event){
+			console.log(event)
+	ball.style.animationName = "spin"
+		})	
+
+</script>
+
+
+</body>
+</html>

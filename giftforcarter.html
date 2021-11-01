@@ -4,6 +4,7 @@
 	<title></title>
 
 <style type="text/css">
+	
 	#backgroundimage {
 			background-image: url(bball.jpg);
 			background-size: cover;
@@ -12,30 +13,84 @@
 			
 }
 
+
+	#carter {
+			background-image: url(carter.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 950px;
+			height: 950px;
+			position: relative;
+			top: 30px;
+			left: -170px;
+
+	}
+
 	#basketball {
 			background-image: url(bball2.png);
 			background-size: contain;
 			background-repeat: no-repeat;
-			width: 100px;
-			height: 100px;
+			width: 80px;
+			height: 80px;
 			position: relative;
 			top: 380px;
-			left: 300px;
-			animation-duration:2s;
-			animation-iteration-count: 2;
+			left: 285px;
+			animation-duration: 1.7s;
+			transition:1.7s;
+			transition-timing-function:ease-in-out; 
+			animation-iteration-count: 1;
+			z-index: 10;
 
 	}
 
+	#box {
+		width: 210px;
+		height: 150px;
+		top: -1000px;
+		left: 185px;
+		background-color: white;
+		position: relative;
+		opacity: 0px;
+		z-index: 10;
+		text-align: center;
+		font-size: 40px;
+		opacity: 0;
+
+	}
+	
+
 @keyframes spin{
 
-	from {
+	0% {
 		top: 380px;
-		left: 300px;
-		}
-	to {top: 550px;
-		left: 700px;
+		left: 285px;
+		transform:rotate(720deg);
 		}
 
+	/*25% {top: 250px;
+		left: 450px;
+		}*/
+
+	50% {top: 60px;
+		left: 650px;
+		transform:rotate(350deg)
+		}
+
+	/*75% {top: 140px;
+		left: 600px;
+		}
+
+	85% {top: 130px;
+		left: 650px;
+		}*/
+
+	75% {top: 160px;
+		left: 800px;
+		}
+
+	100% {top: 600px;
+		left: 800px;
+		}
 }
 
 body {
@@ -46,7 +101,6 @@ body {
 }
 
 
-
 </style>
 
 
@@ -55,6 +109,12 @@ body {
 
 <div id="backgroundimage">
 	<div id="basketball"></div>
+	<div id="carter"></div>
+	<div id="box">
+		
+		<p>HAPPY BIRTHDAY CARTER</p>
+
+	</div>
 
 </div>
 
@@ -62,12 +122,22 @@ body {
 <script type="text/javascript">
 	var carter = document.getElementById("basketball");
 
+	function removeAnimationName () {
+			carter.style.animationName = "";
+			console.log("animation name removed")
 
+			}
 
 	carter.addEventListener(
-		"click", function(){
+		"click", function  (){
 			console.log('HELLO?')
-			carter.style.animationName = "spin"
+			carter.style.animationName = "spin";
+	var box = document.getElementById('box');
+	box.style.opacity ='1';
+
+	setTimeout(removeAnimationName, 2000)
+
+			// this removes the animation name every time on click.
 
 		})
 
