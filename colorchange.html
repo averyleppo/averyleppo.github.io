@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+	.circle {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border-color: black;
+		top: 50px;
+		left: 50px;
+		display: inline-block;
+		background-size: cover;
+		position: relative;*
+
+	}
+
+
+	</style>
+
+
+</head>
+<body>
+
+<div class="circle"></div>
+
+	<script type="text/javascript">
+		
+		function makeCircle () {
+			var x = Math.round(Math.random() *100) || 0;
+			var y = Math.round(Math.random() *100);
+			var z = Math.round(Math.random() *100);
+
+			console.log(x, y, z);
+
+			var circle = document.createElement('div');
+			document.body.appendChild(circle);
+			circle.classList.add('circle');
+			circle.style.backgroundColor = "rgb(" + x + "," + y +"," + z +")";
+		}
+
+	setInterval(makeCircle, 100)
+
+
+
+	</script>
+
+</body>
+</html>

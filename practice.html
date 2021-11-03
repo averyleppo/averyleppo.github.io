@@ -11,24 +11,27 @@
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 500px;
-	position: relative;
-	top: -40px;
-	left: 300px;
+	position: absolute;
+	top: -60px;
+	left: 0px;
 	animation-duration: 1.7s;
-	animation-iteration-count: 3;
+	animation-iteration-count: infinite;
 
 }
 
 @keyframes spin{
 	0% {
-		top: -40;
-		left: 300;
+		top: -60px;
+		left: 0px;
+	}
+	50% {
+		top: 300px;
+		left: 00px;
 	}
 	100% {
-		top: 500;
-		left: 300;
+		top: -60px;
+		left: 0px;
 	}
-
 
 }
 
@@ -50,10 +53,11 @@ function removeAnimationName () {
 	console.log ("animation name removed")
 }
 
-	document.addEventListener(
+	ball.addEventListener(
 		"click", function(event){
-			console.log(event)
-	ball.style.animationName = "spin"
+			console.log(event);
+	ball.style.animationName = "spin";
+	console.log(ball.style.animationName);
 		})	
 
 </script>
