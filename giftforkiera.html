@@ -49,8 +49,8 @@
 
 	#box {
 		width: 450px;
-		height: 90px;
-		top: -400px;
+		height: 140px;
+		top: -430px;
 		left: 400px;
 		position: relative;
 		background-color: white;
@@ -86,7 +86,14 @@ body {
 		<div id="soccerball"></div>
 		<div id="kiera"></div>
 		<div id="box">
-					<p>CONGRATULATIONS KIERA</p>
+			<p>CONGRATULATIONS KIERA!!
+			You're gonna kill it with your new team</p>
+		<!-- <audio controls autoplay>
+
+			<source src="thewayilovedyou.mp3" type="audio/mpeg"> 
+			<embed src= "thewayilovedyou.mp3" autostart=true></embed>
+
+		</audio> -->
 
 		</div>
 		
@@ -113,6 +120,9 @@ body {
 
 			var box = document.getElementById('box');
 			box.style.opacity ='1';
+
+			// var audio = document.getElementById("myAudio").autoplay;
+			// autoplay = true
 
 			setTimeout(removeAnimationName, 1000);
 		})
