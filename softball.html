@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#field {
+			background-image: url(softballfield.jpg);
+			background-size: cover;
+			position: fixed;
+			width: 100%;
+			height: 800px;
+			margin: 0px;
+			top: 0px;
+			left: 0px;
+		}
+
+		#avery {
+			background-image: url(avery.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 200px;
+			left: 1100px;
+			opacity: 1;
+		}
+
+		#avery2 {
+			background-image: url(avery2.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 220px;
+			left: 1030px;
+			opacity: 0;
+		}
+
+		#noa {
+			background-image: url(noa.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			width: 200px;
+			height: 200px;
+			top: 240px;
+			left: 600px;
+		}
+
+		#softball {
+			background-image: url(softball.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			width: 40px;
+			height: 40px;
+			top: 30px;
+			left: 640px;
+			z-index: 5;
+			animation-duration: .8s;
+			transition: .8s;
+			transition-timing-function: ease-in-out; 
+			animation-iteration-count: 1;
+		}
+
+@keyframes spin{
+	0% {
+		top: 30px;
+		left: 640px;
+		transform:rotate(350deg)
+		}
+	50% {
+		top: 100px;
+		left: 1100px;
+	}
+	100% {
+		top: -50px;
+		left: -200px;
+	}
+}
+
+	</style>
+
+
+
+</head>
+<body>
+	<div id="field">
+		<div id="avery"></div>
+		<div id="noa"></div>
+		<div id="softball"></div>
+		<div id="avery2"></div>
+	</div>
+
+<script type="text/javascript">
+	
+	var ball = document.getElementById("softball");
+
+	function removeAnimationName () {
+		ball.style.animationName = "";
+		console.log("animation name removed")
+
+		}
+
+
+	ball.addEventListener("click", function(){
+			console.log('HELLO?');
+			ball.style.animationName = "spin";
+
+			var avery2 = document.getElementById('avery2');
+			avery2.style.opacity ='1';
+
+			var avery = document.getElementById('avery');
+			avery.style.opacity = '0';
+
+			setTimeout(removeAnimationName, 1000);
+
+		})
+
+
+	 {
+			ball.style.animationName = "";
+			console.log("animation name removed")
+			}
+
+
+
+</script>
+
+</body>
+</html>
