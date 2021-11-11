@@ -9,7 +9,7 @@
 			width:100%;
 			background-image: url(field.png);
 			background-repeat: no-repeat;
-			background-size: contain;
+			background-size: cover;
 			position: fixed;
 			height: 800px;
 			margin:0px;
@@ -45,7 +45,7 @@
 			height: 400px;
 			top: 270px;
 			left: 1000px;
-			z-index: 0;
+			z-index: 10;
 	}
 
 	#box {
@@ -89,12 +89,9 @@ body {
 		<div id="box">
 			<p>CONGRATULATIONS KIERA!!
 			You're gonna kill it with your new team</p>
-		<!-- <audio controls autoplay>
+		<audio  id ="song" src="thewayilovedyou.mp3" type="audio/mpeg"> 
 
-			<source src="thewayilovedyou.mp3" type="audio/mpeg"> 
-			<embed src= "thewayilovedyou.mp3" autostart=true></embed>
-
-		</audio> -->
+		</audio>
 
 		</div>
 		
@@ -105,6 +102,9 @@ body {
 
 <script type="text/javascript">
 	var ball = document.getElementById("soccerball");
+
+	var song = document.getElementById("soccerball");
+
 
 
 	function removeAnimationName () {
@@ -122,8 +122,8 @@ body {
 			var box = document.getElementById('box');
 			box.style.opacity ='1';
 
-			// var audio = document.getElementById("myAudio").autoplay;
-			// autoplay = true
+			song.play();
+
 
 			setTimeout(removeAnimationName, 1000);
 		})

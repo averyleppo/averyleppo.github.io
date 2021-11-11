@@ -79,6 +79,7 @@
 	100% {
 		top: -50px;
 		left: -200px;
+
 	}
 }
 
@@ -116,15 +117,23 @@
 			var avery = document.getElementById('avery');
 			avery.style.opacity = '0';
 
+			function changebacktobatter () {
+				avery2.style.opacity = '0';
+				avery.style.opacity = '1';
+				console.log("changed!")
+			}
+
 			setTimeout(removeAnimationName, 1000);
+
+			setTimeout(changebacktobatter, 600);
+
+
+
 
 		})
 
 
-	 {
-			ball.style.animationName = "";
-			console.log("animation name removed")
-			}
+
 
 
 
