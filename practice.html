@@ -12,35 +12,48 @@
 	width: 100%;
 	height: 500px;
 	position: absolute;
-	top: -60px;
+	top: -120px;
 	left: 0px;
-	animation-duration: 1.7s;
+	animation-duration: 1.4s;
 	animation-iteration-count: infinite;
+	z-index: 10;
 
 }
 
 #text {
-	background-color: black;
+	background-color: lightblue;
 	position: absolute;
-	width: 50px;
-	height: 50px;
-	top: -60px;
-	left: 70px;
+	width: 200px;
+	height: 200px;
+	left: 400px;
+	font-size: 40px;
+	text-align: center;
 
+}
+
+#tramp {
+	background-image: url(tramp.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	top: 450px;
+	left: 20px;
 }
 
 
 @keyframes spin{
 	0% {
-		top: -60px;
+		top: -120px;
 		left: 0px;
 	}
 	50% {
-		top: 300px;
+		top: 250px;
 		left: 00px;
 	}
 	100% {
-		top: -60px;
+		top: -120px;
 		left: 0px;
 	}
 
@@ -55,7 +68,10 @@
 <body>
 
 <div id="softball"></div>
-<div id="text"></div>
+<div id="text">
+	<p>Click on the softball!</p>
+</div>
+<div id="tramp"></div>
 
 <script type="text/javascript">
 var ball = document.getElementById("softball");
