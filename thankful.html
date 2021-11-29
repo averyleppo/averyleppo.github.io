@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	#fall {
+		background-image: url(fall.jpg);
+		background-size: cover;
+		margin: 0px;
+		width: 100%;
+		height: 702px;
+		top: 0px;
+		left: 0px;
+	}
+
+	#turkey {
+		background-image: url(turkey.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		top: 200px;
+		left: 400px;
+	}
+
+/*	#text {
+		width: 450px;
+		height: 100px;
+		top: 50px;
+		left: 420px;
+		position: relative;
+		background-color: white;
+		z-index: 5;
+		text-align: center;
+		font-size: 20px;
+		opacity: 1;
+	}*/
+
+/*	#image {
+		width: 450px;
+		height: 100px;
+		top: 50px;
+		left: 420px;
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		font-size: 20px;
+		opacity: 1;		
+	}*/
+
+body {margin: 0px;}
+
+</style>
+
+
+</head>
+<body>
+
+<div id="fall">
+	<div id="turkey"></div>
+	<div id="text">
+		<div id="image">
+			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	var text = document.getElementById("text")
+
+	var turkey = document.getElementById("turkey");
+
+	var image = ["url(1.png)","url(2.png)","url(3.png)","url(4.png)","url(5.png)","url(6.png)"]
+			// image.style.width = "450px";
+			// image.style.height = "100px";
+			// image.style.top = "50px";
+			// image.style.left = "420px";
+
+	turkey.addEventListener("click",function (){
+	 	var x = Math.round(Math.random()*5)
+		console.log(x);
+ 		console.log(image[x]);
+ 		// text.style.backgrounndImage = image[x];
+
+ 	})
+
+
+</script>
+
+</body>
+</html>
