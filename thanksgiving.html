@@ -79,6 +79,16 @@
 		opacity: 1;		
 	}
 
+	#turkey {
+		background-image: url(turkey.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		top: 400px;
+		left: 540px;
+	}
 @keyframes spin{
 	0% {
 		top: 300px;
@@ -109,6 +119,7 @@ body {margin: 0px;}
 	<div id="avery3"></div>
 	<div id="sophia1"></div>
 	<div id="sophia2"></div>
+	<div id="turkey"></div>
 </div>
 
 <script type="text/javascript">
@@ -160,19 +171,11 @@ body {margin: 0px;}
 
 			setTimeout(SophiaChange, 343)
 
-
-
-		
-			
-
-		
-
 			setTimeout(removeAnimationName, 1000);
 
 			setTimeout(AveryChange, 500);
 
 			setTimeout(SophiaChangeBack, 800);
-
 
 		})
 
