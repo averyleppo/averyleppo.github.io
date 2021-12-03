@@ -17,8 +17,17 @@
 		}
 
 		#test {
-			width:50px;
-			height:50px;
+			width:40px;
+			height:40px;
+			border-radius:50%;
+			background-color:blue;
+			z-index:10;
+			position:absolute;
+		}
+
+		#test1 {
+			width:40px;
+			height:40px;
 			border-radius:50%;
 			background-color:blue;
 			z-index:10;
@@ -26,14 +35,14 @@
 		}
 
 		#text {
-			background-color: white;
-			position: absolute;
-			width: 50px;
-			height: 50px;
-			left: 1000px;
-			font-size: 20px;
-			font-color: black;
-			text-align: center;
+			background-image: url(next.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;			
+			width: 60px;
+			height: 60px;
+			left: 1050px;
+			top: 10px;
 
 		}
 
@@ -44,31 +53,34 @@
 <body>
 
 	<div id="test"></div>
+	<div id="test1"></div>
 	<div id="field"></div>
 	<div id="text">
-		<p>Next</p>
 	</div>
 
 	<script type="text/javascript">
 
 		var text = document.getElementById("text");
 
-		var random = Math.round(Math.random()*2);
-
 		var left = ["600px", "730px", "470px"];
 
-		var topOfIt = ["260px", "370px", "370px"];
+		var topOfIt = ["270px", "380px", "380px"];
 
 		var test = document.getElementById('test');
 
+		var test1 = document.getElementById('test1');
 
-
+text.addEventListener("click",function(){
+		var random = Math.round(Math.random()*2);
+		
 		test.style.left = left[random]
 		test.style.top = topOfIt[random]
+		test1.style.left = left[random]
+		test1.style.top = topOfIt[random]
 
 		console.log(left[random])
 		console.log(topOfIt[random])
-
+})
 	</script>
 
 </body>
