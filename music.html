@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+
+	#button {
+		background-color: black;
+		height: 50px;
+		width: 100px;
+		top: 0px;
+		left: 0px;
+		font-size: 20px;
+		color: white;
+	}
+
+	#text {
+		width: 800px;
+		height: 50px;
+		top: 100px;
+		left: 0px;
+		position: relative;
+		background-color: black;
+		z-index: 5;
+		text-align: center;
+		font-size: 20px;
+		opacity: 0;
+		font-size: 40px;
+	}
+
+
+
+</style>
+
+</head>
+<body>
+<center>
+	<div id="button">
+		<p>Song Generator:</p>
+	</div>
+	<div id="text"></div>
+</center>
+
+<script type="text/javascript">
+	
+	var text = document.getElementById("text");
+
+	var music = ["./music/shotgun.mp3","./music/partyintheusa.mp3","./music/heytheredelilah.mp3","./music/dontgiveuponme.mp3","./music/dancingqueen","allnightlonger.mp3"]
+
+	button.addEventListener("click",function (){
+	 	var x = Math.round(Math.random()*5)
+		console.log(x);
+ 		console.log(music[x]);
+
+ 		music.play()
+
+ 	})
+
+</script>
+
+</body>
+</html>
