@@ -41,18 +41,22 @@
 	<div id="text"></div>
 </center>
 
+<audio  controls id="song"></audio>
+
 <script type="text/javascript">
 	
 	var text = document.getElementById("text");
 
 	var music = ["./music/shotgun.mp3","./music/partyintheusa.mp3","./music/heytheredelilah.mp3","./music/dontgiveuponme.mp3","./music/dancingqueen","allnightlonger.mp3"]
 
+	var song = document.getElementById("song");
+
 	button.addEventListener("click",function (){
 	 	var x = Math.round(Math.random()*5)
 		console.log(x);
  		console.log(music[x]);
-
- 		music.play()
+ 		song.src = music[x]
+ 		song.play()
 
  	})
 

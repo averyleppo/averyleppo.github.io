@@ -75,8 +75,11 @@ text.addEventListener("click",function(){
 		
 		test.style.left = left[random]
 		test.style.top = topOfIt[random]
-		test1.style.left = left[random]
-		test1.style.top = topOfIt[random]
+		
+		var random2 = Math.round(Math.random()*2);
+
+		test1.style.left = left[random2]
+		test1.style.top = topOfIt[random2]
 
 		console.log(left[random])
 		console.log(topOfIt[random])

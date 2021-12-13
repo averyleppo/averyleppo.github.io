@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	#menorah {
+		background-image: url(menorah.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		top: 100px;
+		left: 400px;
+	}
+
+	#candle {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 40px;
+		left: 580px;
+	}
+
+
+#candle4{
+	width:500px;
+}
+</style>
+
+</head>
+<body>
+	<div id="menorah"></div>
+	<div id="candle"></div>
+
+<script type="text/javascript">
+	// candle.addEventListener("click", function(){
+	// 	candle.style.backgroundImage = "url(soccerball.png)"
+
+	function makeCandle (x) {
+		var candle = document.createElement('candle');
+			document.body.appendChild(candle);
+			candle.style.width = "100px";
+            candle.style.height = "100px";
+            candle.style.display = "inline-block";
+            candle.style.backgroundRepeat = "no-repeat";
+            candle.style.backgroundColor ="green";
+            candle.style.margin ="5px";
+            candle.id = "candle"+x;
+
+
+		candle.style.backgroundImage = "url(./hphotos/" + x + ".png)";
+		candle.style.backgroundSize = "contain";
+				candle.style.backgroundPosition = "center";
+
+
+	}
+
+
+	for (var x = 0; x < 2; x++) 
+    	{makeCandle(x);}
+
+	// })
+
+</script>
+
+</body>
+</html>
