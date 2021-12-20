@@ -27,45 +27,119 @@
 		left: 580px;
 	}
 
+	#candle1 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 750px;
+	}
 
-#candle4{
-	width:500px;
-}
+	#candle2 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 713px;
+	}
+	
+	#candle3 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 675px;
+	}
+
+	#candle4 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 635px;
+	}
+
+	#candle5 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 525px;
+	}
+
+	#candle6 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 485px;
+	}
+
+	#candle7 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 445px;
+	}
+
+	#candle8 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		top: 70px;
+		left: 405px;
+	}
+
 </style>
 
 </head>
 <body>
 	<div id="menorah"></div>
 	<div id="candle"></div>
+	<div id="candle1"></div>
+	<div id="candle2"></div>
+	<div id="candle3"></div>
+	<div id="candle4"></div>
+	<div id="candle5"></div>
+	<div id="candle6"></div>
+	<div id="candle7"></div>
+	<div id="candle8"></div>
+
 
 <script type="text/javascript">
-	// candle.addEventListener("click", function(){
-	// 	candle.style.backgroundImage = "url(soccerball.png)"
+	candle.addEventListener("click", function(){
+		candle.style.backgroundImage = "url(soccerball.png)"
+ })
 
-	function makeCandle (x) {
-		var candle = document.createElement('candle');
-			document.body.appendChild(candle);
-			candle.style.width = "100px";
-            candle.style.height = "100px";
-            candle.style.display = "inline-block";
-            candle.style.backgroundRepeat = "no-repeat";
-            candle.style.backgroundColor ="green";
-            candle.style.margin ="5px";
-            candle.id = "candle"+x;
+	candle1.addEventListener("click", function(){
+		candle.style.backgroundImage = "url(./.hphotos/1.png)"
+ })
 
-
-		candle.style.backgroundImage = "url(./hphotos/" + x + ".png)";
-		candle.style.backgroundSize = "contain";
-				candle.style.backgroundPosition = "center";
-
-
-	}
-
-
-	for (var x = 0; x < 2; x++) 
-    	{makeCandle(x);}
-
-	// })
 
 </script>
 
