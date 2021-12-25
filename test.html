@@ -3,18 +3,170 @@
 <head>
 	<title></title>
 
-	<style type="text/css">
-		
-	#ah{
-		background-image:url(./hanukkahphotos/0.png);
-		width:100px;
-		height:100px;
+<style type="text/css">
+	
+	#menorah {
+		background-image: url(menorah.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 600px;
+		height: 600px;
+		top: 100px;
+		left: 350px;
 	}
-	</style>
+
+	#candle {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 90px;
+		left: 600px;
+		z-index: 3;
+	}
+
+	#candle1 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 810px;
+		z-index: 3;
+	}
+
+	#candle2 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 760px;
+		z-index: 3;
+	}
+	
+	#candle3 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 715px;
+		z-index: 3;
+	}
+
+	#candle4 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 670px;
+		z-index: 3;
+	}
+
+	#candle5 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 535px;
+		z-index: 3;
+	}
+
+	#candle6 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 490px;
+		z-index: 3;
+	}
+
+	#candle7 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 445px;
+		z-index: 3;
+	}
+
+	#candle8 {
+		background-image: url(candle.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 120px;
+		left: 395px;
+		z-index: 3;
+	}
+
+</style>
+
 </head>
 <body>
+	<div id="menorah"></div>
+	<div id="candle"></div>
+	<div id="candle1"></div>
+	<div id="candle2"></div>
+	<div id="candle3"></div>
+	<div id="candle4"></div>
+	<div id="candle5"></div>
+	<div id="candle6"></div>
+	<div id="candle7"></div>
+	<div id="candle8"></div>
 
-<div id="ah"></div>
+
+<script type="text/javascript">
+	
+	function makeCandle (x) {
+		var candle = document.createElement('candle');
+			document.body.appendChild(candle);
+			candle.style.width = "100px";
+            candle.style.height = "100px";
+            candle.style.display = "inline-block";
+            candle.style.backgroundRepeat = "no-repeat";
+            candle.style.backgroundColor ="green";
+            candle.style.margin ="5px";
+            candle.id = "candle"+x;
+
+
+		candle.style.backgroundImage = "url(./hphotos/" + x + ".png)";
+		candle.style.backgroundSize = "contain";
+				candle.style.backgroundPosition = "center";
+
+
+	}
+
+
+	for (var x = 0; x < 2; x++) 
+    	{makeCandle(x);}
+
+
+</script>
 
 </body>
 </html>
