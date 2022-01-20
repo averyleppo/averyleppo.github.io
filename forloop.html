@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#text{
+			color: blue;
+			font-size: 50px;
+		}
+
+
+
+	</style>
+
+
+</head>
+<body>
+
+</center>
+	<div id="text">
+		<p>This is my website to practice writing for loops :)</p>
+	</div>
+</center>
+
+<script type="text/javascript">
+	
+	function makePizza(input) {
+		var slice = document.createElement("div");
+		document.body.appendChild(slice)
+		slice.style.width = "200px";
+		slice.style.height = "200px";
+		slice.style.backgroundImage = "url(pizza.png)";
+		slice.style.backgroundSize = "contain";
+		slice.style.display = "inline-block";
+		slice.innerText=input;
+
+	}
+
+	for (var i=1; i<24; i=i+1){makePizza(i)}
+
+
+</script>
+
+</body>
+</html>
