@@ -50,11 +50,14 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			position: absolute;			
-			width: 140px;
-			height: 70px;
-			left: 585px;
+			width: 110px;
+			height: 50px;
+			left: 560px;
 			top: 10px;
-			z-index: 5;
+			z-index: 10;
+			font-size: 40px;
+			padding-left: 37px;
+			padding-top: 5px;
 		}
 
 	</style>
@@ -67,9 +70,7 @@
 	<div id="test1"></div>
 	<div id="field"></div>
 	<div id="text"></div>
-	<div id="correct"></div>
-
-<button id="correct">Home Score</button>
+<div id="correct"></div>
 
 	<script type="text/javascript">
 
@@ -97,13 +98,17 @@ text.addEventListener("click",function(){
 		console.log(left[random])
 		console.log(topOfIt[random])
 })
- 		var correct = document.getElementById("correct");
+
+
+
+ 		var scoreboard = document.getElementById("correct");
 
  		var count = 0;
 
- correct.addEventListener("click",function(){
-  	count++;
-  	document.getElementById("begin").innerText= count;
+ scoreboard.addEventListener("click", function(){
+  	count = count +1;
+  	console.log(count);
+  	scoreboard.innerText = count;
 
   })
 
