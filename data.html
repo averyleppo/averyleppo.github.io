@@ -193,16 +193,44 @@
 
 	var paper8 = document.getElementById('paper8');
 
+	var counter = 0;
 
 	document.addEventListener("click", function(){
-		paper.style.opacity = "1";
-		paper2.style.opacity = "1";
-		paper3.style.opacity = "1";
-		paper4.style.opacity = "1";
-		paper5.style.opacity = "1";
-		paper6.style.opacity = "1";
-		paper7.style.opacity = "1";
-		paper8.style.opacity = "1";
+		
+		counter = counter + 1;
+
+		if (counter == 1){
+			paper.style.opacity = "1";
+		}
+
+		if (counter == 2){
+			paper2.style.opacity = "1";
+		}
+
+		if (counter == 3){
+			paper3.style.opacity = "1";
+		}
+
+		if (counter == 4){
+			paper4.style.opacity = "1";
+		}
+
+		if (counter == 5){
+			paper5.style.opacity = "1";
+		}
+
+		if (counter == 6){
+			paper6.style.opacity = "1";
+		}
+
+		if (counter == 7){
+			paper7.style.opacity = "1";
+		}
+
+		if (counter == 8){
+			paper8.style.opacity = "1";
+		}
+
 
 	})
 
