@@ -14,6 +14,163 @@
 		height: 500px;
 		top: 150px;
 		left: 450px;
+		z-index: 10;
+	}
+
+	#jaimie{
+		background-image: url(jaimienote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 450px;
+		height: 450px;
+		top: 5px;
+		left: 20px;
+		opacity: 0;
+	}
+
+	#lena{
+		background-image: url(lenanote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		top: 100px;
+		left: 750px;
+		opacity: 0;
+	}
+
+	#drew{
+		background-image: url(drewnote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		top: 520px;
+		left: 250px;
+		opacity: 0;
+	}
+
+	#ani{
+		background-image: url(aninote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 450px;
+		height: 450px;
+		top: 465px;
+		left: 835px;
+		opacity: 0;
+	}
+
+	#avery{
+		background-image: url(averynote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 450px;
+		height: 450px;
+		top: 270px;
+		left: 5px;
+		opacity: 0;
+	}
+
+	#hattie{
+		background-image: url(hattienote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 550px;
+		height: 550px;
+		top: 600px;
+		left: 50px;
+		opacity: 0;
+	}
+
+	#jack{
+		background-image: url(jacknote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		top: 260px;
+		left: 935px;
+		opacity: 0;
+	}
+
+	#jasper{
+		background-image: url(jaspernote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 450px;
+		height: 450px;
+		top: 580px;
+		left: 690px;
+		opacity: 0;
+	}
+
+	#noemi{
+		background-image: url(noeminote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 400px;
+		height: 400px;
+		top: 160px;
+		left: 50px;
+		opacity: 0;
+	}
+
+	#elle{
+		background-image: url(ellenote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 450px;
+		height: 450px;
+		top: 430px;
+		left: 10px;
+		opacity: 0;
+	}
+
+	#kiera{
+		background-image: url(kieranote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 420px;
+		height: 420px;
+		top: 20px;
+		left: 700px;
+		opacity: 0;
+	}
+
+	#sophia{
+		background-image: url(sophianote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 420px;
+		height: 420px;
+		top: 100px;
+		left: 300px;
+		opacity: 0;
+	}
+
+	#josie{
+		background-image: url(josienote.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		top: 350px;
+		left: 930px;
+		opacity: 0;
 	}
 
 
@@ -23,6 +180,122 @@
 <body>
 
 	<div id="box"></div>
+	<div id="jaimie"></div>
+	<div id="lena"></div>
+	<div id="drew"></div>
+	<div id="ani"></div>
+	<div id="avery"></div>
+	<div id="hattie"></div>
+	<div id="jack"></div>
+	<div id="jasper"></div>
+	<div id="noemi"></div>
+	<div id="elle"></div>
+	<div id="kiera"></div>
+	<div id="sophia"></div>
+	<div id="josie"></div>
+	<audio id="song"></audio>
+
+<script type="text/javascript">
+	
+	var box = document.getElementById('box');
+
+	var jaimie = document.getElementById('jaimie');
+
+	var lena = document.getElementById('lena');
+
+	var drew = document.getElementById('drew');
+
+	var ani = document.getElementById('ani');
+
+	var avery = document.getElementById('avery');
+
+	var hattie = document.getElementById('hattie');
+
+	var jack = document.getElementById('jack');
+
+	var jasper = document.getElementById('jasper');
+
+	var noemi = document.getElementById('noemi');
+
+	var elle = document.getElementById('elle');
+
+	var kiera = document.getElementById('kiera');
+
+	var sophia = document.getElementById('sophia');
+
+	var josie = document.getElementById('josie');
+
+	var counter = 0;
+
+	var music = ["appreciated.mp3"]
+
+	var song = document.getElementById("song");
+
+
+	box.addEventListener("click", function(){
+		
+
+		counter = counter + 1;
+
+		if (counter == 1){
+			jaimie.style.opacity = "1";
+			var x = Math.round(Math.random()*0)
+			song.src = music[x]
+ 			song.play()
+ 		}
+
+		if (counter == 2){
+			lena.style.opacity = "2";
+		}
+
+		if (counter == 3){
+			drew.style.opacity = "3";
+		}
+
+		if (counter == 4){
+			ani.style.opacity = "4";
+		}
+
+		if (counter == 5){
+			avery.style.opacity = "5";
+		}
+
+		if (counter == 6){
+			hattie.style.opacity = "6";
+		}
+
+		if (counter == 7){
+			jack.style.opacity = "7";
+		}
+
+		if (counter == 8){
+			jasper.style.opacity = "8";
+		}
+
+		if (counter == 9){
+			noemi.style.opacity = "9";
+		}
+
+		if (counter == 10){
+			elle.style.opacity = "10";
+		}
+
+		if (counter == 11){
+			kiera.style.opacity = "11";
+		}
+
+		if (counter == 12){
+			sophia.style.opacity = "12";
+		}
+
+		if (counter == 13){
+			josie.style.opacity = "13";
+		}
+
+
+	})
+
+</script>
 
 </body>
 </html>
