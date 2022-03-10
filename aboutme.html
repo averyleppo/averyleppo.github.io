@@ -13,8 +13,31 @@
 			font-size: 30px;
 			text-align: center;
 			padding-top: 20px;
-
 		}
+
+		#title {
+			font-size: 20px;
+			text-align: center;
+		}
+
+		#me {
+			background-image: url(avery.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: fixed;
+			width: 450px;
+			height: 450px;
+			top: 185px;
+			left: 850px;
+		}
+
+		#text {
+			font-size: 18px;
+			margin: 15px;
+		}
+
+
+
 
 .image {
  background-image: url(file:///Users/student/Desktop/Screen%20Shot%202021-10-04%20at%2010.56.39%20AM.png); 
@@ -78,6 +101,78 @@ a{
 
 </div>
 
+<div id="title">
+
+<h1>
+	About Me:
+</h1>
+
+</div>
+
+<div id="text">
+<div id="me"></div>
+<div id="color">
+	<p>Favorite color:</p>
+</div>
+<div id="food">
+	<p>Favorite food:</p>
+</div>
+<div id="sport">
+	<p>Favorite sport:</p>
+</div>
+<div id="songs">
+	<p>Favorite songs:</p>
+</div>
+
+<audio id="song"></audio>
+
+</div>
+
+
+<script type="text/javascript">
+	
+	var color = document.getElementById('color');
+
+	var food = document.getElementById('food');
+
+	var sport = document.getElementById('sport');
+
+	var song = document.getElementById('song');
+
+	var music = ["./music/shotgun.mp3","./music/partyintheusa.mp3","./music/heytheredelilah.mp3","./music/dontgiveuponme.mp3","./music/dancingqueen.mp3","./music/secrets.mp3"]
+
+	songs.addEventListener("click",function (){
+	 	var x = Math.round(Math.random()*5)
+		console.log(x);
+ 		console.log(music[x]);
+ 		song.src = music[x]
+ 		song.play()
+ 		songs.innerText = "Favorite songs: 🎶"
+
+ 	})
+
+	color.addEventListener("click", function(){
+
+		color.style.color = "red";
+		color.innerText = "Favorite color: red";
+
+	})
+
+	food.addEventListener("click", function(){
+
+		food.innerText = "Favorite food: 🍔🍟";
+
+	})
+
+	sport.addEventListener("click", function(){
+
+		sport.style.color = "blue";
+		sport.innerText = "Favorite sport: softball";
+
+	})
+
+
+</script>
 
 </body>
 </html>
