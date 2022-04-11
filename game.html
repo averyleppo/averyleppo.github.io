@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		var input = document.getElementById('input');
+		var x = 0;
+		var lovesong = document.getElementById('sound');
+
+		function createHearts (){
+			var hearts = document.createElement('div');
+			document.body.appendChild(hearts);
+			hearts.classList.add("love");
+		}
+		
+		function changePosition (){
+			hearts.style.left = 1000 * Math.random() + "px";
+			hearts.style.top = 1000 * Math.random() + "px";
+		};
+
+		hearts.addEventListener("click", function(){
+			console.log("hi");
+			x = x + 1;
+			input.value = x;
+			hearts.classList.remove("virus");
+			lovesong.play()
+		})
+
+		setInterval(createHearts, 1000);
+
+	</script>
+
+</body>
+</html>

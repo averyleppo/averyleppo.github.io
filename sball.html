@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	#field {
+		background-image: url(softballfield2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: fixed;
+		width: 100%;
+		height: 700px;
+		margin: 0px;
+		top: 0px;
+		left: 0px;
+	}
+
+	.fielders{
+		background-image: url(x.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;	
+		width:30px;
+		height:30px;
+		left: 140px;
+		top: 605px;
+		z-index:10;
+	}
+
+	.batters {
+		background-image: url(o.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width:40px;
+		height:40px;
+		left: 30px;
+		top: 600px;
+		z-index:10;
+	}
+
+	.softballs {
+		background-image: url(softball.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 70px;
+		height: 70px;
+		left: 230px;
+		top: 580px;
+		z-index:10;
+		position:absolute;
+	}
+
+	#infieldertext {
+		width:40px;
+		height:40px;
+		left: 110px;
+		top: 635px;
+		z-index:10;
+		position:absolute;
+		font-size: 25px;
+	}
+
+	#battertext {
+		width:40px;
+		height:40px;
+		left: 20px;
+		top: 635px; 
+		z-index:10;
+		position:absolute;
+		font-size: 25px;
+	}
+
+	#softballtext {
+		width:40px;
+		height:40px;
+		left: 225px;
+		top: 635px; 
+		z-index:10;
+		position:absolute;
+		font-size: 25px;
+	}
+
+	#reset {
+		background-image: url(reset.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 80px;
+		height: 80px;
+		left: 1100px;
+		top: 25px; 
+		z-index:10;
+		position:absolute;
+	}
+
+
+</style>
+
+
+
+</head>
+<body>
+
+	<div id="field"></div>
+	<div id="reset"></div>
+		<div id="infieldertext">
+			<p>infielder</p>
+		</div>
+		<div id="battertext">
+			<p>batter</p>
+		</div>
+		<div id="outfieldertext">
+			<p>outfielder</p>
+		</div>
+		<div id="softballtext">
+			<p>softball</p>
+		</div>
+		<input id="input">
+	</div>
+	
+
+<script type="text/javascript">
+
+	var reset = document.getElementById("reset");
+
+
+document.addEventListener("mousemove", function(event) {
+            console.log(event)
+        });
+
+var counter = 0;
+
+
+function makeFielder(input) {
+		var fielder = document.createElement('div');
+		document.body.appendChild(fielder);
+		fielder.classList.add('fielders')
+
+fielder.addEventListener("click", function(){
+	counter = counter +1;
+
+	if (counter%2==1) {
+		document.addEventListener("mousemove", move)
+
+}
+		else if (counter%2==0) {
+			document.removeEventListener("mousemove", move)
+		}
+
+	})
+
+reset.addEventListener("click", function(){
+	fielder.style.left = "140px";
+	fielder.style.top = "605px";
+})
+
+	function move (event){
+		fielder.style.left = event.clientX-20 + "px";
+		fielder.style.top = event.clientY-20 + "px";
+	}//end of eventListener//
+	}//end of makeFielderfunction//
+
+	for (var i=1; i<100; i=i+1){makeFielder(i)}
+
+
+
+
+
+function makeBatter(input) {
+		var batter = document.createElement('div');
+		document.body.appendChild(batter);
+		batter.classList.add('batters')
+
+batter.addEventListener("click", function(){
+	counter = counter +1;
+
+	if (counter%2==1) {
+		document.addEventListener("mousemove", move2)
+
+}
+		else if (counter%2==0) {
+			document.removeEventListener("mousemove", move2)
+		}
+
+	})
+
+reset.addEventListener("click", function(){
+	batter.style.left = "30px";
+	batter.style.top = "600px";
+})
+
+	function move2 (event){
+		batter.style.left = event.clientX-20 + "px";
+		batter.style.top = event.clientY-20 + "px";
+	}//end of eventListener//
+	}//end of makeFielderfunction//
+
+	for (var i=1; i<100; i=i+1){makeBatter(i)}
+
+
+
+function makeSoftball(input) {
+		var softball = document.createElement('div');
+		document.body.appendChild(softball);
+		softball.classList.add('softballs')
+
+softball.addEventListener("click", function(){
+	counter = counter +1;
+
+	if (counter%2==1) {
+		document.addEventListener("mousemove", move3)
+
+}
+		else if (counter%2==0) {
+			document.removeEventListener("mousemove", move3)
+		}
+
+	})
+
+reset.addEventListener("click", function(){
+	softball.style.left = "230px";
+	softball.style.top = "580px";
+})
+
+	function move3 (event){
+		softball.style.left = event.clientX-30 + "px";
+		softball.style.top = event.clientY-30 + "px";
+	}//end of eventListener//
+	}//end of makeFielderfunction//
+
+	for (var i=1; i<100; i=i+1){makeSoftball(i)}
+
+
+</script>
+
+
+</body>
+</html>
