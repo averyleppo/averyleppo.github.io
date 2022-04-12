@@ -162,7 +162,7 @@ function makeFielder(input) {
 		document.body.appendChild(fielder);
 		fielder.classList.add('fielders')
 
-	fielder.addEventListener("click", function(){
+fielder.addEventListener("click", function(){
 	counter = counter +1;
 
 	if (counter%2==1) {
@@ -203,6 +203,12 @@ batter.addEventListener("click", function(){
 		}
 
 	})
+
+	function move2 (event){
+		batter.style.left = event.clientX-20 + "px";
+		batter.style.top = event.clientY-20 + "px";
+	}
+
 
 softball.addEventListener("click", function(){
 	counter = counter +1;
