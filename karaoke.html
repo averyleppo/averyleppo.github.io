@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+
+	
+body{
+background-color: white;
+}
+
+/*#poster{
+	width: 200vw;
+	height: 300vw;
+	top: 50vw;
+	left: 100vw;
+	background-color: red;
+	position: absolute;
+	text-align: center;
+	font-size: 2vw;
+}*/
+
+#lyrics {
+	width: 30vw;
+	height: 30vw;
+	background-color: black;
+	position: absolute;
+	top: 10vw;
+	left: 35vw;
+	color: white;
+	text-align: center;
+	font-size: 2vw;
+}
+
+#sound{
+	width: 20vw;
+	height: 3vw;
+	position: absolute;
+	top: 5vw;
+	left: 40vw;
+}
+
+#button{
+	width: 20vw;
+	height: 4vw;
+	position: absolute;
+	top: 5vw;
+	left: 40vw;
+	z-index: 1;
+}
+
+#block{
+	width: 20vw;
+	height: 4vw;
+	position: absolute;
+	top: 8.5vw;
+	left: 40vw;
+	z-index: -1;
+}
+
+	</style>
+
+</head>
+<body>
+	<div id="button"></div>
+	<div id="block"></div>
+	<div id="lyrics"></div>
+	<div id="poster"></div>
+	<audio id="sound" src="stiches.mp3" controls></audio>
+
+<script type="text/javascript">
+	
+	var lyrics = document.getElementById("lyrics");
+
+	var sound = document.getElementById("sound");
+
+	var phrases = ["I thought that I've been hurt before","But no one's ever left me quite this sore","Your words cut deeper than a knife","Now I need someone to breathe me back to life","Got a feeling that I'm going under... but I know that I'll make it out alive","If I quit calling you my lover... move on... you watch me... bleed until I can't breathe","I'm shaking, falling onto my knees... and now that I'm without your kisses","I'll be needing stitches... tripping over myself", "Aching, begging you to come help... and now that I'm without your kisses","I'll be needing stitches... just like a moth drawn to a flame","Oh, you lured me in I couldn't sense the pain","Your bitter heart cold to the touch","Now I'm gonna reap what I sow... I'm left seeing red","On my own... got a feeling that I'm going under","But I know that I'll make it out alive... if I quit calling you my lover... move on","You watch me bleed until I can't breathe... I'm shaking, falling onto my knees","And now that I'm without your kisses... I'll be needing stitches","Tripping over myself... aching, begging you to come help","And now that I'm without your kisses... I'll be needing stitches","music","Needle and the thread... gotta get you outta my head... needle and the thread... gonna wind up dead x4","Needle and the thread... gotta get you outta my head... needle and the thread... gonna wind up dead x3","Needle and the thread... gotta get you outta my head... needle and the thread... gonna wind up dead x2","Needle and the thread... gotta get you outta my head... get you out of my head... you watch me bleed until I can't breathe","I'm shaking, falling onto my knees... and now that I'm without your kisses","I'll be needing stitches... tripping over myself","Aching, begging you to come help... and now that I'm without your kisses","I'll be needing stitches... and now that I'm without your kisses", "I'll be needing stitches... and now that I'm without your kisses... I'll be needing stitches","I'll be needing stitches... and now that I'm without your kisses... I'll be needing stitches","I'll be needing stitches... and now that I'm without your kisses... I'll be needing stitches"]
+
+	var counter = -1;
+
+		function Lyrics(){
+			counter = counter + 1
+			console.log(counter)
+			lyrics.innerText = phrases[counter]
+		}
+
+	var button = document.getElementById("button");
+	var block = document.getElementById("block");
+
+	button.addEventListener("click", function(){
+	 	sound.play()
+	 // 	counter = counter + 1
+		// console.log(counter)
+		// lyrics.innerText = phrases[counter]
+
+	block.style.zIndex = "4"
+
+	 })
+
+setTimeout(Set, 5)
+
+function Set(){
+
+	setInterval(Lyrics, 6800)
+}
+
+</script>
+
+</body>
+</html>

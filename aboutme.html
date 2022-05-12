@@ -36,6 +36,18 @@
 			margin: 15px;
 		}
 
+		#celiacimage {
+			background-image: url(celiacimage.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			opacity: 0;
+			position: fixed;
+			width: 300px;
+			height: 300px;
+			top: 400px;
+			left: 100px;
+		}
+
 
 
 
@@ -123,7 +135,17 @@ a{
 <div id="songs">
 	<p>Favorite songs:</p>
 </div>
+<div id="movie">
+	<p>Favorite movie:</p>
+</div>
+<div id="vacation">
+	<p>Favorite vacation spot:</p>
+</div>
+<div id="celiacimagetext">
+	<p>Favorite drawing:</p>
+</div>
 
+<div id="celiacimage"></div>
 <audio id="song"></audio>
 
 </div>
@@ -138,6 +160,14 @@ a{
 	var sport = document.getElementById('sport');
 
 	var song = document.getElementById('song');
+
+	var movie = document.getElementById('movie');
+
+	var vacation = document.getElementById('vacation');
+
+	var celiacimage = document.getElementById('celiacimage');
+
+	var celiacimagetext = document.getElementById('celiacimagetext');
 
 	var music = ["./music/shotgun.mp3","./music/partyintheusa.mp3","./music/heytheredelilah.mp3","./music/dontgiveuponme.mp3","./music/dancingqueen.mp3","./music/secrets.mp3"]
 
@@ -168,6 +198,24 @@ a{
 
 		sport.style.color = "blue";
 		sport.innerText = "Favorite sport: softball";
+
+	})
+
+	movie.addEventListener("click", function(){
+
+		movie.innerText = "Favorite movie: ✨Mamma Mia!✨ OR Five Feet Apart❤️‍🩹";
+
+	})
+
+	vacation.addEventListener("click", function(){
+
+		vacation.innerText = "Favorite vacation spot: Kennebunkport, Maine🗺📍";
+
+	})
+
+	celiacimagetext.addEventListener("click", function(){
+
+		celiacimage.style.opacity = "10";
 
 	})
 
