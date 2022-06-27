@@ -43,6 +43,45 @@
   		/*text-align: center;*/
 	}
 
+	.dropbtn {
+  		background-color: crimson;
+  		color: white;
+  		padding: 14px 16px;
+  		font-size: 20px;
+  		border: none;
+  		color: white;
+  		text-align: center;
+	}
+
+/* need to position the dropdown content */
+	.dropdown {
+ 		position: relative;
+ 		display: inline-block;
+	}
+
+/* Dropdown Content */
+	.dropdown-content {
+  		display: none;
+  		position: absolute;
+  		background-color: white;
+  		min-width: 160px;
+  		z-index: 1;
+	}
+
+/* Links inside the dropdown */
+	.dropdown-content a {
+  		color: black;
+  		text-decoration: none;
+		display: block;
+	}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #D3D3D3;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
 body {margin: 0px;}
 
 </style>
@@ -62,6 +101,13 @@ body {margin: 0px;}
 		<a href="celiachome.html">Home</a>
   		<a href="celiaccoping.html">Coping with Reactions</a>
   		<a href="celiacorderfood.html">Tips for Ordering Food</a>
+  		<div class="dropdown">
+  			<button class="dropbtn">Favorites</button>
+  			<div class="dropdown-content">
+   				 <a href="celiacresturants.html">Resturants</a>
+   				 <a href="#">Food Brands</a>
+   				 <a href="#">Travel Destinations</a>
+  		</div>
 	</div>
 	<div id="title">HOMEPAGE</div>
 	<div id="text">
