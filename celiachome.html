@@ -27,7 +27,7 @@
 
 	.navbar a {
   		float: left;
- 		font-size: 20px;
+ 		  font-size: 20px;
   		color: white;
   		text-align: center;
   		padding: 14px 16px;
@@ -42,21 +42,23 @@
   		font-color: black;
   		/*text-align: center;*/
 	}
+  
+  .dropdown {
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+  }
 
-	.dropbtn {
-  		background-color: crimson;
+	.dropdown .dropbtn {
+      background-color: inherit;
+      font-family: inherit;
+      margin: 5;
   		color: white;
   		padding: 14px 16px;
   		font-size: 20px;
   		border: none;
   		color: white;
   		text-align: center;
-	}
-
-/* need to position the dropdown content */
-	.dropdown {
- 		position: relative;
- 		display: inline-block;
 	}
 
 /* Dropdown Content */
@@ -72,7 +74,7 @@
 	.dropdown-content a {
   		color: black;
   		text-decoration: none;
-		display: block;
+		  display: block;
 	}
 
 /* Change color of dropdown links on hover */
@@ -92,7 +94,7 @@ body {margin: 0px;}
 <center>
 <h1>
 
-  Talk Celiac
+  Chat Celiac
 
 </h1>
 </center>
@@ -105,9 +107,11 @@ body {margin: 0px;}
   			<button class="dropbtn">Favorites</button>
   			<div class="dropdown-content">
    				 <a href="celiacresturants.html">Resturants</a>
-   				 <a href="#">Food Brands</a>
-   				 <a href="#">Travel Destinations</a>
-  		</div>
+           <a href="celiacfoodbrands.html">Food Brands</a>
+           <a href="celiactravel.html">Travel Destinations</a>
+  		  </div>
+      </div>
+      <a href="celiacaboutme.html">About Me</a>
 	</div>
 	<div id="title">HOMEPAGE</div>
 	<div id="text">

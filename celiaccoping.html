@@ -18,20 +18,38 @@
 
 	#title {
 		top: 170px;
-		left: 470px;
+		left: 640px;
 		position: absolute;
   		font-size: 30px;
   		font-color: black;
   		text-align: center;
 	}
 
-	#image {
+	.navbar a {
+  		float: left;
+ 		  font-size: 20px;
+  		color: white;
+  		text-align: center;
+  		padding: 14px 16px;
+  		text-decoration: none;
+  	}
+
+	#text {
+		top: 250px;
+		left: 400px;
+		position: absolute;
+  		font-size: 20px;
+  		font-color: black;
+  		/*text-align: center;*/
+	}
+
+		#image {
 		background-image: url(celiacimage.jpg);
 		background-size: cover;
 		position: absolute;
 		width: 270px;
 		height: 220px;
-		top: 170px;
+		top: 200px;
 		left: 70px;
 	}
 
@@ -41,8 +59,8 @@
 		position: absolute;
 		width: 250px;
 		height: 200px;
-		top: 400px;
-		left: 80px;
+		top: 430px;
+		left: 70px;
 	}
 
 	#image3 {
@@ -51,7 +69,7 @@
 		position: absolute;
 		width: 250px;
 		height: 200px;
-		top: 630px;
+		top: 670px;
 		left: 50px;
 	}
 
@@ -61,28 +79,50 @@
 		position: absolute;
 		width: 250px;
 		height: 270px;
-		top: 820px;
-		left: 80px;
+		top: 850px;
+		left: 70px;
 	}
+  
+  .dropdown {
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+  }
 
-	.navbar a {
-  		float: left;
- 		font-size: 20px;
+	.dropdown .dropbtn {
+      background-color: inherit;
+      font-family: inherit;
+      margin: 5;
+  		color: white;
+  		padding: 14px 16px;
+  		font-size: 20px;
+  		border: none;
   		color: white;
   		text-align: center;
-  		padding: 14px 16px;
-  		text-decoration: none;
-  	}
-
-	#text {
-		top: 230px;
-		left: 400px;
-		position: absolute;
-  		font-size: 20px;
-  		font-color: black;
-  		margin-right: 25px;
-  		/*text-align: center;*/
 	}
+
+/* Dropdown Content */
+	.dropdown-content {
+  		display: none;
+  		position: absolute;
+  		background-color: white;
+  		min-width: 160px;
+  		z-index: 1;
+	}
+
+/* Links inside the dropdown */
+	.dropdown-content a {
+  		color: black;
+  		text-decoration: none;
+		  display: block;
+	}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #D3D3D3;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
 
 body {margin: 0px;}
 
@@ -94,7 +134,7 @@ body {margin: 0px;}
 <center>
 <h1>
 
-  Talk Celiac
+  Chat Celiac
 
 </h1>
 </center>
@@ -103,6 +143,15 @@ body {margin: 0px;}
 		<a href="celiachome.html">Home</a>
   		<a href="celiaccoping.html">Coping with Reactions</a>
   		<a href="celiacorderfood.html">Tips for Ordering Food</a>
+  		<div class="dropdown">
+  			<button class="dropbtn">Favorites</button>
+  			<div class="dropdown-content">
+   				 <a href="celiacresturants.html">Resturants</a>
+   				 <a href="celiacfoodbrands.html">Food Brands</a>
+   				 <a href="celiactravel.html">Travel Destinations</a>
+  		  </div>
+      </div>
+      <a href="celiacaboutme.html">About Me</a>
 	</div>
 	<div id="title">Self Care Tool Kit After a Celiac Reaction</div>
 	<div id="image"></div>
